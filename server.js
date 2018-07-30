@@ -1,7 +1,39 @@
-const express = require ('express');
+const express = require('express');
+const mongoose = require('mongoose')
+
+
+// routes for api
+
+const users = require('./routes/api/users')
+const profile = require('./routes/api/profile')
+const exercises = require('./routes/api/exercises')
+
+
+
+
+
 const app = express();
 
-app.get('/', (req,res) => res.send('Working'))
+// mLab info for db 
+const database = require('./config/keys').mongoURI
+
+// Connecting to MongoDB
+mongoose
+.connect(database)
+.then(() => console.log('MongoDB up and running!'))
+.catch(err => console.log(err))
+
+
+app.get('/', (req, res) => res.send('Working'))
+
+
+
+// App Routes
+
+app.use('/api/users', users)
+app.use('/api/profile', profile)
+app.use('/api/exercises', exercises)
+
 
 const port = process.env.PORT || 3000;
 
