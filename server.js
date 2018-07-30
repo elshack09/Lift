@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 
 
 // routes for api
-
 const users = require('./routes/api/users')
 const profile = require('./routes/api/profile')
 const exercises = require('./routes/api/exercises')
@@ -29,7 +28,6 @@ app.get('/', (req, res) => res.send('Working'))
 
 
 // App Routes
-
 app.use('/api/users', users)
 app.use('/api/profile', profile)
 app.use('/api/exercises', exercises)
