@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
-
+const jwt = require("jsonwebtoken");
 // GET route
 router.get("/", (req, res) => res.json({ msg: "Route for Users" }));
 
@@ -19,6 +19,7 @@ router.post("/signup", (req, res) => {
         email: req.body.email,
         password: req.body.password
       });
+
       // encrypting password with 6 characters
       bcrypt.genSalt(6, (err, salt) => {
         bcrypt.hash(signUpUser.password, salt, (err, hash) => {
@@ -31,6 +32,28 @@ router.post("/signup", (req, res) => {
         });
       });
     }
+  });
+});
+
+// user login using JWT token
+
+router.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  User.findOne({ email }).then(user => {
+    if (!user) {
+      return res.status(404).json({ email: "Account not found" });
+    }
+    bcrypt.compare(password, user.password).then(match => {
+      if (match) {g
+        const payload = { id: user.id, name: user.name}
+
+        jwt.sign(payload, );
+      } else {
+        return res.stats(400).json({ password: "Incorrect" });
+      }
+    });
   });
 });
 

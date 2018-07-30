@@ -9,12 +9,11 @@ const profile = require('./routes/api/profile')
 const exercises = require('./routes/api/exercises')
 
 const app = express();
-
 // middleware
-app.use(bodyParser.urlencoded({
-    extended: false
-}))
+app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
+
+
 
 
 // mLab info for db 
@@ -22,9 +21,9 @@ const database = require('./config/keys').mongoURI
 
 // Connecting to MongoDB
 mongoose
-    .connect(database)
-    .then(() => console.log('MongoDB up and running!'))
-    .catch(err => console.log(err))
+.connect(database)
+.then(() => console.log('MongoDB up and running!'))
+.catch(err => console.log(err))
 
 
 app.get('/', (req, res) => res.send('Working'))
