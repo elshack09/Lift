@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const keys = require("../../config/keys");
 // GET route
 router.get("/", (req, res) => res.json({ msg: "Route for Users" }));
 
@@ -46,10 +47,11 @@ router.post("/login", (req, res) => {
       return res.status(404).json({ email: "Account not found" });
     }
     bcrypt.compare(password, user.password).then(match => {
-      if (match) {g
-        const payload = { id: user.id, name: user.name}
-
-        jwt.sign(payload, );
+      if (match) {
+        const payload = { id: user.id, name: user.name };
+        jwt.sign(payload, keys.key, { expiresIn: 1800 }, (err, token) => {
+          res.json({ success: true, token: "Bearer" + token });
+        });
       } else {
         return res.stats(400).json({ password: "Incorrect" });
       }
