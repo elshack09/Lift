@@ -34,15 +34,14 @@ class Navbartop extends React.Component {
                     </NavbarBrand>
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
-                        <NavbarNav middle>
-                        <h2 class="h2-responsive white-text"><em>App for Beginners Weight Training</em></h2>
-                        </NavbarNav>
+                       
                         <NavbarNav right>
                         <Button type="button" class="btn red darken-4 btn-rounded waves-effect">Login</Button>
                         <Button type="button" class="btn red darken-4 btn-rounded waves-effect">SignUp</Button>
                         </NavbarNav>
                     </Collapse>
                 </Navbar>
+                
             </Router>
         );
     }
