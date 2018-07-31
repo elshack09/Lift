@@ -32,10 +32,10 @@ app.get('/', (req, res) => res.send('Working'))
 
 // App Routes
 app.use('/api/users', users)
-app.use('/api/profile', profile)
+app.use('/api/profile', profile)   
 app.use('/api/exercises', exercises)
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`Server running ${port}`))
