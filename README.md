@@ -1,5 +1,5 @@
 # Lift
-The Flight Assistant is a app that helps Flight Attendants better assist customers. Customers can request services during the duration of their flight. Customers will be able to pick the services they will need and will also be able to tell the flight attendant their mood. Customers will be able to upload a image of themselves, pick if they want food, snacks, or a drink, and will be able to submit the request to the attendant. For the admin view Flight Attendants will be able to see the list of customers requesting assistance and will be able to check and delete the the customers once serviced.
+MERN Stack app that teaches beginners how to lift weights.
 
 ## Heroku Deployed App
 https://glacial-woodland-20110.herokuapp.com/
@@ -27,7 +27,7 @@ https://trello.com/b/8oTp2R4D/lift
 
 # Wireframe
 
-![Wireframe](https://github.com/elshack09/flight-assistant/blob/master/images/IMG_3611.JPG)
+![Wireframe](https://github.com/elshack09/lift/blob/master/liftWireframes.png)
 
 # ERD 
-![ERD](https://github.com/elshack09/flight-assistant/blob/master/images/erd.jpg)
+![ERD](https://github.com/elshack09/lift/blob/master/erd.png)
