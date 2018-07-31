@@ -5,8 +5,7 @@ import {
   NavbarNav,
   NavbarToggler,
   Collapse,
-  NavItem,
-  NavLink,
+
   Row,
   Col,
   Input,
@@ -111,14 +110,14 @@ class Navbartop extends React.Component {
                   </Col>
                 </Row>
               </Container>
-            </NavbarNav>
-          </Collapse>
-          <Button
+            </NavbarNav><Button
             type="button"
             class="btn red darken-4 btn-rounded waves-effect"
           >
             SignUp
           </Button>
+          </Collapse>
+          
         </Navbar>
       </Router>
     );

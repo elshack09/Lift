@@ -6,6 +6,7 @@ import Navbartop from './components/Navbartop';
 import Imagehomepage from './components/Imagehomepage';
 import FooterPage from './components/Footerpage';
 import Profileform from './components/Profileform';
+import Exercises from './components/Execises';
 class App extends Component {
   render() {
     return (
@@ -16,6 +17,9 @@ class App extends Component {
        <Route exact path="/" component={Imagehomepage}/>
        <div className="container">
         <Route exact path="/profile/form" component={Profileform}/>
+        </div> 
+        <div className="container">
+        <Route exact path="/exercises" component={Exercises}/>
         </div> 
          <FooterPage />
       </div>

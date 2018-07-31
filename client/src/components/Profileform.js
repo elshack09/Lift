@@ -1,87 +1,69 @@
-import React from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React from "react";
+import {
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText, CardImg
+} from "reactstrap";
 
 class Profileform extends React.Component {
   render() {
     return (
       <Form>
+        <CardImg className="img-fluid"src="https://images.unsplash.com/photo-1511810119369-d499bbf2a325?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=575da372a42044cb2a6ecef8118ae877&auto=format&fit=crop&w=400&q=60"></CardImg>
         <FormGroup row>
-          <Label for="exampleEmail" sm={2}>Email</Label>
+          <Label for="exampleName" sm={2}>
+            Name
+          </Label>
           <Col sm={10}>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            <Input type="text" name="full-name" id="exampleName" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="examplePassword" sm={2}>Password</Label>
+          <Label for="dob" sm={2}>
+            Date of Birth
+          </Label>
           <Col sm={10}>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+            <Input type="text" name="dob" id="exampleDOB" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="exampleSelect" sm={2}>Select</Label>
+          <Label for="weight" sm={2}>
+            Weight
+          </Label>
           <Col sm={10}>
-            <Input type="select" name="select" id="exampleSelect" />
+            <Input type="text" name="weight" id="exampleWeight" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
-          <Col sm={10}>
-            <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple />
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleText" sm={2}>Text Area</Label>
+          <Label for="exampleText" sm={2}>
+            Description
+          </Label>
           <Col sm={10}>
             <Input type="textarea" name="text" id="exampleText" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="exampleFile" sm={2}>File</Label>
+          <Label for="exampleFile" sm={2}>
+            File
+          </Label>
           <Col sm={10}>
             <Input type="file" name="file" id="exampleFile" />
             <FormText color="muted">
-              This is some placeholder block-level help text for the above input.
-              It's a bit lighter and easily wraps to a new line.
+              Add Profile Picture
             </FormText>
           </Col>
         </FormGroup>
-        <FormGroup tag="fieldset" row>
-          <legend className="col-form-label col-sm-2">Radio Buttons</legend>
-          <Col sm={10}>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                Option one is this and that—be sure to include why it's great
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                Option two can be something else and selecting it will deselect option one
-              </Label>
-            </FormGroup>
-            <FormGroup check disabled>
-              <Label check>
-                <Input type="radio" name="radio2" disabled />{' '}
-                Option three is disabled
-              </Label>
-            </FormGroup>
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="checkbox2" sm={2}>Checkbox</Label>
-          <Col sm={{ size: 10 }}>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" id="checkbox2" />{' '}
-                Check me out
-              </Label>
-            </FormGroup>
-          </Col>
-        </FormGroup>
+        
+        
         <FormGroup check row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button>Submit</Button>
+            <Button className="btn red darken-4 btn-rounded waves-effect">
+              Submit
+            </Button>
           </Col>
         </FormGroup>
       </Form>
@@ -89,4 +71,4 @@ class Profileform extends React.Component {
   }
 }
 
-export default Profileform
+export default Profileform;
