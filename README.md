@@ -7,8 +7,6 @@ https://glacial-woodland-20110.herokuapp.com/
 ## Technologies Used
 ### Front-End
 * Reactstrap
-* Boo
-
 * Axios
 * React-Router-Dom
 ### Back-End
