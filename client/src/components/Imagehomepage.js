@@ -10,7 +10,7 @@ const Imagehomepage = (props) => {
         <CardImgOverlay>
           <CardTitle><h1>Weight Training</h1></CardTitle>
           <CardText><h2 class="h2-responsive white-text"><em>App for Beginners</em></h2></CardText> < br/>< br/>< br/>< br/>< br/>< br/>< br/>< br/>< br/>
-          <Button type="button" class="btn red darken-4 btn-rounded waves-effect">Enter</Button>
+          <Button type="button" href="profile/form" class="btn red darken-4 btn-rounded waves-effect" >Enter</Button>
         </CardImgOverlay>
       </Card>
       

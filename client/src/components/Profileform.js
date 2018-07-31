@@ -61,7 +61,7 @@ class Profileform extends React.Component {
         
         <FormGroup check row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button className="btn red darken-4 btn-rounded waves-effect">
+            <Button  href="/exercises" className="btn red darken-4 btn-rounded waves-effect">
               Submit
             </Button>
           </Col>
